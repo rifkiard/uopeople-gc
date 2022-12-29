@@ -1,0 +1,37 @@
+@tailwind base;
+
+@layer base {
+
+    html,
+    body {
+        @apply bg-white;
+
+        min-height: 100vh;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @for $i from 0 through 50 {
+        .text-truncate-\[#{$i}\] {
+            display: -webkit-box;
+            line-clamp: $i;
+            box-orient: vertical;
+            -webkit-line-clamp: $i;
+            -webkit-box-orient: vertical;
+            -ms-line-clamp: $i;
+            -ms-box-orient: vertical;
+            overflow: hidden;
+
+            @if $i ==1 {
+                word-break: break-all;
+            }
+
+            @else {
+                word-break: break-word;
+            }
+        }
+    }
+}
