@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppCol from "@/components/atoms/AppCol.vue";
+import AppLogo from "@/components/atoms/AppLogo.vue";
 import AppRow from "@/components/atoms/AppRow.vue";
 import AppWrapper from "@/components/atoms/AppWrapper.vue";
 import AppLinkItem from "@/components/molecules/AppLinkItem.vue";
@@ -55,7 +56,7 @@ const links: {
   <AppWrapper>
     <section class="min-h-screen flex justify-center flex-col py-10">
       <div class="flex justify-center">
-        <img src="@/assets/images/logo.png" alt="" class="w-[200px]" />
+        <AppLogo class="w-[200px]"></AppLogo>
       </div>
       <h1
         class="text-primary-100 text-3xl md:text-5xl font-bold text-center leading-snug md:leading-snug mt-5"
